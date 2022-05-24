@@ -1,0 +1,27 @@
+.home {
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  /* width: 80%; */
+  /* justify-content: center; */
+}
+
+.box {
+  height: 70px;
+  border-left: solid 1px red;
+  /* box-shadow: 0 4px 30px rgb(231, 228, 228); */
+  box-shadow: 0 4px 50px var(--Light-Grayish-Cyan-Filter-Tablets);
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.user-data {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+}
