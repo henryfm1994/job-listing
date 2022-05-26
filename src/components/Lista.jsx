@@ -4,7 +4,7 @@ import image from "../assets/images/photosnap.svg"
 
 export function Lista() {
     return (
-        <div className='home'>
+        <div className='container'>
             <div></div>
             <div className="box">
                 <div className='user'>

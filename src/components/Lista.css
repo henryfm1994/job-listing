@@ -1,7 +1,66 @@
 .home {
-  padding: 50px 0;
+  /* padding: -100px 0; */
+  position: relative;
+  bottom: 35px;
+}
+
+.container-search {
+  padding-bottom: 1rem;
   display: grid;
   grid-template-columns: 10% 80% 10%;
+  /* position: relative; */
+  /* width: 80%; */
+  /* justify-content: center; */
+}
+
+.search {
+  /* height: 70px; */
+  /* border-left: solid 5px var(--desaturated); */
+  /*          x     y   difum       color*/
+  box-shadow: 30px 20px 100px -40px var(--Dark-Grayish-Cyan);
+  border-radius: 5px;
+  padding: 25px;
+  background-color: white;
+  padding: 0;
+}
+
+.search-elem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clear {
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  color: var(--desaturated);
+  cursor: pointer;
+}
+
+.clear:hover {
+  text-decoration: underline;
+}
+
+.search-list {
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.search li {
+  background-color: var(--Light-Grayish-Cyan-Filter-Tablets);
+  padding: 0.6rem;
+  margin-right: 1rem;
+  border-radius: 3px;
+  color: var(--desaturated);
+}
+
+.container-workers {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  /* position: relative; */
   /* width: 80%; */
   /* justify-content: center; */
 }
@@ -32,6 +91,7 @@
   flex-direction: column;
   /* line-height: 30px; */
   justify-content: space-between;
+  margin-left: 10px;
 }
 
 .lista-company {
@@ -44,7 +104,7 @@
 .lista-company li {
   margin-right: 20px;
   padding: 0.5rem;
-  border-radius: 15px;
+  border-radius: 1rem;
 }
 
 .company {
@@ -61,6 +121,15 @@
   color: var(--Light-Grayish-Cyan-Filter-Tablets);
 }
 
+.position {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.position:hover {
+  color: var(--desaturated);
+}
+
 .user-contract {
   display: flex;
   list-style: none;
@@ -71,6 +140,7 @@
 
 .user-contract li {
   padding-right: 20px;
+  padding: 0.5rem;
 }
 
 .user-lang {
@@ -92,4 +162,10 @@
   padding: 0.4rem;
   border-radius: 3px;
   color: var(--desaturated);
+  cursor: pointer;
+}
+
+.lang li:hover {
+  background-color: var(--desaturated);
+  color: var(--Light-Grayish-Cyan-Filter-Tablets);
 }
