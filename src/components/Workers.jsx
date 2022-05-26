@@ -5,9 +5,9 @@ import "./Lista.css"
 export function Workers() {
 
     return (
-        <div className='home' >
+        <div>
 
-            <div className="container-search">
+            {/* <div className="container-search">
                 <div></div>
                 <div className='search'>
                     <div className='search-elem'>
@@ -19,7 +19,7 @@ export function Workers() {
                     </div>
                 </div>
                 <div></div>
-            </div>
+            </div> */}
 
             {
                 workers.map(worker => <div key={worker.id}>
