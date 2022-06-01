@@ -12,7 +12,6 @@ function App() {
 
   const deleteItem = (item) => {
     setBuscar(buscar.filter(del => item !== del))
-
   }
 
   const addItem = (item) => {
@@ -49,6 +48,46 @@ function App() {
       addDel={addDel}
     />)
 
+  const filtro = workers.filter(
+    worker => {
+      let encontrar = false;
+      const aux = [worker.role, worker.level];
+      const comp = aux.concat(worker.languages);
+
+      let cant = 0;
+
+      for (let index = 0; index < buscar.length; index++) {
+        encontrar = comp.includes(buscar[index])
+
+        if (encontrar === true) {
+          cant++
+        }
+
+      }
+      if (cant === buscar.length) {
+        encontrar = true
+      } else encontrar = false
+      return encontrar;
+    }
+  )
+
+  const searchList = filtro.map(
+    worker => <Workers
+      key={worker.id}
+      logo={worker.logo}
+      company={worker.company}
+      nuevo={worker.new}
+      featured={worker.featured}
+      position={worker.position}
+      postedAt={worker.postedAt}
+      contract={worker.contract}
+      location={worker.location}
+      role={worker.role}
+      level={worker.level}
+      languages={worker.languages}
+      addDel={addDel}
+    />)
+
   useEffect(() => {
     if (buscar.length !== 0) {
       setSearch("search")
@@ -64,7 +103,9 @@ function App() {
       <div className='home' >
         <Search search={search} setSearch={setSearch} buscar={buscar} setBuscar={setBuscar} deleteItem={deleteItem} addItem={addItem} />
         <div>
-          {workerList}
+          {
+            buscar.length === 0 ? workerList : searchList
+          }
         </div>
       </div>
     </>
