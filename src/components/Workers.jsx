@@ -38,18 +38,18 @@ export function Workers({ logo, company, nuevo, featured, position, postedAt, co
                                     <li>{contract}</li>
                                     <li>{location}</li>
                                 </ul>
-                                <div className='hr'></div>
-                            </div>
 
+                            </div>
+                            <hr />
                         </div>
                         <div className="user-lang">
-                            <ul className="lang">
+                            <div className="lang">
                                 {
                                     comp.map((comp, index) =>
-                                        <li key={index} onClick={() => addDel(comp)} >{comp}</li>
+                                        <div key={index} onClick={() => addDel(comp)} >{comp}</div>
                                     )
                                 }
-                            </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
