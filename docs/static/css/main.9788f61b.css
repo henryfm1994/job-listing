@@ -24,7 +24,7 @@ code {
 }
 .head {
   background-color: var(--desaturated);
-  background-image: url(./static/media/bg-header-desktop.8694f4668c94cdc9d16e.svg);
+  background-image: url(../media/bg-header-desktop.8694f4668c94cdc9d16e.svg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 175px;
